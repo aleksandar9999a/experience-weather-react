@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Dimensions, TouchableOpacity, FlatList, SafeAreaView } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { StyleSheet, View, Text, Dimensions, FlatList, SafeAreaView } from 'react-native';
 import { getData } from '../../service/weather.service';
 import WeatherItem from './WeatherItem';
 
-let { height, width } = Dimensions.get('window');
+let { width } = Dimensions.get('window');
 
 export default function FullInformation() {
   const [data, setData] = useState<any>();
