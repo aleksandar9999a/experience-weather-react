@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     height
   },
   image: {
-    flex: 1,
   },
   search: {
     flex: 0.5,
@@ -47,6 +46,6 @@ const styles = StyleSheet.create({
   },
   full: {
     justifyContent: 'center',
-    marginTop: -100
+    marginTop: -230
   }
 });
