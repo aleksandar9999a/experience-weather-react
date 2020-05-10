@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   general: {
-    flex: 2,
+    flex: 1,
     justifyContent: 'center',
   },
   full: {
