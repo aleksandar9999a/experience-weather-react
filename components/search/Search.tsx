@@ -17,17 +17,27 @@ export default function Search() {
     function searchCurrLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(async pos => {
-              const latitude = pos.coords.latitude;
-              const longitude = pos.coords.longitude;
-                
-              getWeatherByCoords(latitude, longitude);
+                const latitude = pos.coords.latitude;
+                const longitude = pos.coords.longitude;
+
+                getWeatherByCoords(latitude, longitude);
             });
-          }
+        }
+    }
+
+    function setSearchText(newText: string) {
+        setText(newText);
     }
 
     return (
         <View style={styles.container}>
-            <TextInput style={styles.input} onChangeText={text => setText(text)} defaultValue={text} />
+            <TextInput
+                placeholder='Search your city'
+                placeholderTextColor="white"
+                style={styles.input}
+                onChangeText={setSearchText}
+                defaultValue={text}
+            />
             <TouchableOpacity style={styles.button} onPress={submit} >
                 <Icon name="search" size={20} />
             </TouchableOpacity>
