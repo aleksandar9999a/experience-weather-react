@@ -33,7 +33,7 @@ export default function Search() {
         <View style={styles.container}>
             <TextInput
                 placeholder='Search your city'
-                placeholderTextColor="white"
+                placeholderTextColor="black"
                 style={styles.input}
                 onChangeText={setSearchText}
                 defaultValue={text}
