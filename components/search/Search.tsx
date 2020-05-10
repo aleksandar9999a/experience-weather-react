@@ -22,8 +22,6 @@ export default function Search() {
                 
               getWeatherByCoords(latitude, longitude);
             });
-          } else {
-            // this.weather.message = "Access to GPS is denied!";
           }
     }
 
@@ -58,7 +56,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: 'rgba(4, 2, 1, 0.2)',
         height: 40,
-        width: 50,
+        width: 40,
         borderRadius: 50,
         borderColor: 'transparent',
         padding: 10,
