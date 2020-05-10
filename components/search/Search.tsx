@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { getWeather } from '../../service/weather.service';
 
 export default function Search() {
+    const [text, setText] = useState('');
+
+    function submit() {
+        if (text != '' && text != undefined) {
+            getWeather(text);
+            setText('');
+        }
+    }
+
     return (
         <View style={styles.container}>
-            <TextInput style={styles.input} />
+            <TextInput style={styles.input} onChangeText={text => setText(text)} defaultValue={text} />
             <TouchableOpacity
-                style={styles.button}
+                style={styles.button} onPress={submit}
             >
                 <Icon name="search" size={20} />
             </TouchableOpacity>
@@ -18,7 +28,7 @@ export default function Search() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, 
+        flex: 1,
         flexDirection: 'row',
         marginTop: Constants.statusBarHeight + 20,
     },
