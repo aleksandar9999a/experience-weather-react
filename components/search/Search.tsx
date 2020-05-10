@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(4, 2, 1, 0.2)',
         borderColor: 'transparent',
         borderRadius: 50,
-        borderWidth: 0.7,
         padding: 12,
         marginRight: 5
     },
@@ -38,7 +37,6 @@ const styles = StyleSheet.create({
         height: 40,
         width: 50,
         borderRadius: 50,
-        borderWidth: 0.7,
         borderColor: 'transparent',
         padding: 10
     },
