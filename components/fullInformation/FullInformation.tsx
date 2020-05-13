@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, Dimensions, FlatList, SafeAreaView } from 'react-native';
 import { getData } from '../../service/weather.service';
 import WeatherItem from './WeatherItem';
+import Day from '../../interfaces/Day';
 
 let { width } = Dimensions.get('window');
 
 export default function FullInformation() {
-  const [data, setData] = useState<any>();
-  getData().subscribe((d: any) => {
-    setData(d.data)
+  const [days, setDays] = useState<Day[]>();
+  getData().subscribe(d => {
+    setDays(d.data)
   });
 
   return (
@@ -19,7 +20,7 @@ export default function FullInformation() {
       <View>
         <SafeAreaView>
           <FlatList
-            data={data}
+            data={days}
             renderItem={({item}) => <WeatherItem data={item}/>}
           />
         </SafeAreaView>
