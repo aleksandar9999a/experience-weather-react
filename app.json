@@ -2,6 +2,9 @@
   "expo": {
     "name": "ExperienceWeatherReact",
     "slug": "ExperienceWeatherReact",
+    "android": {
+      "package": "com.experience.weather"
+    },
     "platforms": [
       "ios",
       "android",
